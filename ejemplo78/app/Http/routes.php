@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/hola', function () {
-    return view('welcome');
+Route::get('/', function () {
+    return view('webshop.templates.carrusel');
 });
+Route::post('/login', 'UsuarioController@login');
+Route::post('/registro', 'UsuarioController@registro');
+Route::get('/logout', 'UsuarioController@logout');

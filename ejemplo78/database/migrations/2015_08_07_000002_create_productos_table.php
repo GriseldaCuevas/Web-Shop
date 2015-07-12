@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsuariosTable extends Migration
+class CreateProductosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,14 +12,15 @@ class CreateUsuariosTable extends Migration
      */
     public function up()
     {
-        Schema::create('usuarios', function (Blueprint $table) {
+        Schema::create('productos', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('usuario');
-            $table->string('password', 60);
             $table->string('nombre');
-            $table->string('cp');
-            $table->double('saldo', 8, 2);
-            $table->integer('admin');
+            $table->string('marca');
+            $table->integer('cantidad');
+            $table->double('precio', 8, 2);
+            $table->string('img');
+            $table->integer('id_categoria')->unsigned();
+            $table->foreign('id_categoria')->references('id')->on('categorias');
             $table->timestamps();
         });
     }
