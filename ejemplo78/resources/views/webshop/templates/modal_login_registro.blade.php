@@ -34,6 +34,9 @@
 		        			<input type="password" class="form-control" name="pass2" placeholder="Repetir contraseña"/>
 		        		</div>
 		        		<div>
+		        			<input type="text" class="form-control" name="tarjeta" placeholder="Numero de tarjeta"/>
+		        		</div>
+		        		<div>
 		        			<input type="text" class="form-control" name="codigo_postal" placeholder="Codigo Postal"/>
 		        		</div>
 		        		<div class="form-group">

@@ -19,19 +19,19 @@
 			        <span class="icon-bar"></span>
 			        <span class="icon-bar"></span>
 			      </button>
-			      <a class="navbar-brand" href="#">WebShop</a>
+			      <a class="navbar-brand" href="/">WebShop</a>
 			    </div>
 			    <!-- Collect the nav links, forms, and other content for toggling -->
 			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			      <form class="navbar-form navbar-right" role="search">
+			      <form action="/productos/buscar" method="get" class="navbar-form navbar-right" role="search">
 			      	<input type="hidden" name="_token" value="{{ csrf_token() }}">
 			        <div class="form-group">
-			          <input type="text" class="form-control" placeholder="Buscar en la tienda">
+			          <input type="text" name="buscar" class="form-control" placeholder="Buscar en la tienda">
 			        </div>
 			        <button type="submit" class="btn btn-default">Buscar</button>
 			      </form>
 			      <ul class="nav navbar-nav navbar-right">
-			      	<li><a href="#">Categorias</a></li>
+			      	<li><a href="/categorias">Categorias</a></li>
 			      	@if(!Session::has('logeado'))
 			        	<li><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg">Iniciar Sesion</a></li>
 					@else
@@ -54,38 +54,24 @@
 			<div class="panel-body">
 				<label>Marcas Reconocidad</label>
 				<ul class="list-group">
-					<li class="list-group-item"><a href="">Sony</a></li>
-					<li class="list-group-item"><a href="">Microsoft</a></li>
-					<li class="list-group-item"><a href="">Samsung</a></li>
-					<li class="list-group-item"><a href="">Dell</a></li>
-					<li class="list-group-item"><a href="">Motorola</a></li>
+					<li class="list-group-item"><a href="/marcas/Sony">Sony</a></li>
+					<li class="list-group-item"><a href="/marcas/Microsoft">Microsoft</a></li>
+					<li class="list-group-item"><a href="/marcas/Samsung">Samsung</a></li>
+					<li class="list-group-item"><a href="/marcas/Dell">Dell</a></li>
+					<li class="list-group-item"><a href="/marcas/Motorola">Motorola</a></li>
 				</ul>
 			</div>
 			<hr/>
-			<form>
-				<input type="hidden" name="_token" value="{{ csrf_token() }}">
-				<div class="panel-body">
-					<label>categoria</label>
-					<ul class="list-group">
-						<li class="list-group-item"><input type="checkbox" name="check"/>&nbsp;Electronica</li>
-						<li class="list-group-item"><input type="checkbox" name="check"/>&nbsp;Electronica</li>
-						<li class="list-group-item"><input type="checkbox" name="check"/>&nbsp;Electronica</li>
-						<li class="list-group-item"><input type="checkbox" name="check"/>&nbsp;Electronica</li>
-					</ul>
-				</div>
-				<div class="panel-body">
-					<label>Rango de precios</label>
-					<ul class="list-group">
-						<li class="list-group-item"><input type="checkbox" name="check"/>&nbsp;1000-2000</li>
-						<li class="list-group-item"><input type="checkbox" name="check"/>&nbsp;2000-3500</li>
-						<li class="list-group-item"><input type="checkbox" name="check"/>&nbsp;3500-5000</li>
-						<li class="list-group-item"><input type="checkbox" name="check"/>&nbsp;Mas de 5000</li>
-					</ul>
-				</div>
-				<div class="panel-body">
-					<button type="submit" class="btn btn-default">Buscar</button>
-				</div>
-			</form>
+			<div class="panel-body">
+				<label>Categorias Recomendadas</label>
+				<ul class="list-group">
+					<li class="list-group-item"><a href="/categorias/Computadoras">Computadoras</a></li>
+					<li class="list-group-item"><a href="/categorias/Consolas">Consolas</a></li>
+					<li class="list-group-item"><a href="/categorias/Videojuegos">Videojuegos</a></li>
+					<li class="list-group-item"><a href="/categorias/Tablets">Tablets</a></li>
+					<li class="list-group-item"><a href="/categorias/Celulares">Celulares</a></li>
+				</ul>
+			</div>
 		</section>
 		<section id="este" class="panel panel-default">
 			@yield('bloque')
@@ -95,7 +81,10 @@
 				<h4>WebShop&copy;</h4>
 			</footer>
 		</section>
+		@include('webshop.templates.modal_lista_productos_venta');
+		@include('webshop.templates.error');
 		@include('webshop.templates.modal_login_registro')
+		@include('webshop.templates.modal_producto')
 		@include('webshop.templates.error');
 		<script type="text/javascript" src="http://localhost:8000/js/jquery-2.1.4.min.js"></script>
 		<script type="text/javascript" src="http://localhost:8000/bootstrap/js/bootstrap.min.js"></script>

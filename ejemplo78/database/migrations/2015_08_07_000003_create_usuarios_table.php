@@ -18,6 +18,7 @@ class CreateUsuariosTable extends Migration
             $table->string('password', 60);
             $table->string('nombre');
             $table->string('cp');
+            $table->string('tarjeta');
             $table->double('saldo', 8, 2);
             $table->integer('admin');
             $table->timestamps();

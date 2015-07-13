@@ -3,6 +3,7 @@
 }
 
 #oeste{
+	margin-left: 1em;
 	width: 20%;
 }
 
@@ -33,14 +34,32 @@
 	width: 48%
 }
 
-#registro, #login{
+#registro, #login, .info_modal_producto{
 	display: inline-block;
 	padding: 1em;
 	text-align: center;
 	vertical-align: top;
 }
 
+#formu, #formu2{
+	display: inline-block;
+	vertical-align: top;
+}
+
 .imagen-carrusel{
 	width: 100%;
 	height: 788px !important;
+}
+
+.categorias{
+	padding: 1em;
+	text-align: center;
+}
+
+.bloque{
+	text-align: center;
+}
+
+.info_modal_producto{
+	width: 48%;
 }
