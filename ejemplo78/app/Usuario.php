@@ -16,7 +16,7 @@ class Usuario extends Model{
     	$usuario = new Usuario();
     	$usuario->nombre = $request->input('nombre');
     	$usuario->usuario = $request->input('usuario');
-    	$usuario->password = sha1($request->input('pass'));
+    	$usuario->password = sha1($request->input('pass1'));
     	$usuario->admin = 0;
     	$usuario->saldo = 0;
         $usuario->tarjeta = sha1($request->input('tarjeta'));

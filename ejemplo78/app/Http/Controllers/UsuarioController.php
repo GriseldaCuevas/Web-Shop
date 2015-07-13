@@ -15,10 +15,9 @@ class UsuarioController extends Controller{
     public function login(Request $request){
         $user  = $request->input('usuario');
         $pass = sha1($request->input('pass'));
-        $error_login = false;
-        $error_registro = false;
         $usuario = Usuario::login($user, $pass);
 
+        
         if(count($usuario) != 0){
             \Session::put('logeado', true);
             \Session::put('usuario', $user);
@@ -26,9 +25,8 @@ class UsuarioController extends Controller{
             \Session::put('carrito', array());
             \Session::put('total_compra', 0);
             return \Redirect::back();
-        }else{
-            $error_login = true;    
-            return \Redirect::back()->with(array('error_login' => $error_login));
+        }else{    
+            return \Redirect::back()->with(array('error_login' => true));
         }
     }
 
