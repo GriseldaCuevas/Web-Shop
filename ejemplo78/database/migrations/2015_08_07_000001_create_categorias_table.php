@@ -16,6 +16,7 @@ class CreateCategoriasTable extends Migration
             $table->increments('id');
             $table->string('nombre');
             $table->string('img');
+            $table->integer('activo');
             $table->timestamps();
         });
     }

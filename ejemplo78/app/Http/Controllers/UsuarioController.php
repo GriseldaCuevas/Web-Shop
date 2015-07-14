@@ -13,8 +13,8 @@ use App\Venta;
 class UsuarioController extends Controller{
 
     public function login(Request $request){
-        $user  = $request->input('usuario');
-        $pass = sha1($request->input('pass'));
+        $user  = str_replace("\"","",str_replace("'","",$request->input('usuario')));
+        $pass = sha1(str_replace("\"","",str_replace("'","",$request->input('pass'))));
         $usuario = Usuario::login($user, $pass);
 
         
@@ -35,8 +35,8 @@ class UsuarioController extends Controller{
         $error_registro = false;
 
         if(count($usuario) == 0){
-            if(strlen($request->input('pass1')) > 0 && strlen($request->input('pass2')) > 0){
-                if(strcmp($request->input('pass1'), $request->input('pass2')) == 0){
+            if(strlen(str_replace("\"","",str_replace("'","",$request->input('pass1')))) > 0 && strlen(str_replace("\"","",str_replace("'","",$request->input('pass2')))) > 0){
+                if(strcmp(str_replace("\"","",str_replace("'","",$request->input('pass1'))), str_replace("\"","",str_replace("'","",$request->input('pass2')))) == 0){
                     $id_usuario = Usuario::registrarUsuario($request);
                     \Session::put('logeado', true);
                     \Session::put('usuario', $request->input('usuario'));

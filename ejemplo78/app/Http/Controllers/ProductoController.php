@@ -61,7 +61,7 @@ class ProductoController extends Controller{
     }
 
     public function eliminar(Request $request){
-        Producto::destroy($request->input('id_producto'));
+        Producto::eliminar($request->input('id_producto'));
         return response()->json(['validado' => true]);
     }
 

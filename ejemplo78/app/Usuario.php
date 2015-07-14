@@ -13,14 +13,14 @@ class Usuario extends Model{
     }
 
     public static function registrarUsuario($request){
+
     	$usuario = new Usuario();
-    	$usuario->nombre = $request->input('nombre');
-    	$usuario->usuario = $request->input('usuario');
-    	$usuario->password = sha1($request->input('pass1'));
+    	$usuario->nombre = str_replace("\"","",str_replace("'","",$request->input('nombre')));
+    	$usuario->usuario = str_replace("\"","",str_replace("'","",$request->input('usuario')));
+    	$usuario->password = str_replace("\"","",str_replace("'","",sha1($request->input('pass1'))));
     	$usuario->admin = 0;
     	$usuario->saldo = 0;
-        $usuario->tarjeta = sha1($request->input('tarjeta'));
-    	$usuario->cp = $request->input('codigo_postal');
+    	$usuario->cp = str_replace("\"","",str_replace("'","",$request->input('codigo_postal')));
     	$usuario->save();
     	return $usuario->id;
     }
