@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Producto;
 
 class ProductosVenta extends Model{
 
@@ -14,6 +15,7 @@ class ProductosVenta extends Model{
 			$producto_venta->id_venta = $id_venta;
 			$producto_venta->id_producto = $producto->id;
 			$producto_venta->save();
+			Producto::decrementar($producto->id);
 		}
 	}
 }

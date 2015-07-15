@@ -52,7 +52,7 @@
 
 		<section id="oeste" class="panel panel-default">
 			<div class="panel-body">
-				<label>Marcas Reconocidad</label>
+				<label>Marcas Reconocidas</label>
 				<ul class="list-group">
 					<li class="list-group-item"><a href="/marcas/Sony">Sony</a></li>
 					<li class="list-group-item"><a href="/marcas/Microsoft">Microsoft</a></li>
@@ -77,15 +77,16 @@
 			@yield('bloque')
 		</section>
 		<section id="sur">
-			<footer>
-				<h4>WebShop&copy;</h4>
+			<footer >
+				<img src="http://localhost:8000/img/footer/1.png" alt="">
+				<strong><h4>WebShop&copy;</h4></strong>
 			</footer>
 		</section>
-		@include('webshop.templates.modal_lista_productos_venta');
-		@include('webshop.templates.error');
+		@include('webshop.templates.modal_lista_productos_venta')
+		@include('webshop.templates.error')
 		@include('webshop.templates.modal_login_registro')
 		@include('webshop.templates.modal_producto')
-		@include('webshop.templates.error');
+		@include('webshop.templates.error')
 		<script type="text/javascript" src="http://localhost:8000/js/jquery-2.1.4.min.js"></script>
 		<script type="text/javascript" src="http://localhost:8000/bootstrap/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="http://localhost:8000/js/webshop.js"></script>

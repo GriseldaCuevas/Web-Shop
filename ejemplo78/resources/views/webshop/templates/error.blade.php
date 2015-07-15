@@ -81,7 +81,7 @@
 	        <h4 class="modal-title">Inposible registrar la cuenta.</h4>
 	      </div>
 	      <div class="modal-body">
-	        <p>{{Session::get('mensaje')}}.</p>
+	        <p>{{Session::get('mensaje')}}</p>
 	      </div>
 	      <div class="modal-footer"></div>
 	    </div><!-- /.modal-content -->

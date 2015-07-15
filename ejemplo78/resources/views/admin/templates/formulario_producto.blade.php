@@ -14,7 +14,7 @@
 				</td>
 				<td align="center">Categoria:</td>
 				<td>
-					<select name="categoria" class="form-control">
+					<select name="categoria" class="form-control" id="categoria">
 						<option value="0">(Seleccione una categoria)</option>
 						@foreach($categorias as $categoria)
 							<option value="{{$categoria->id}}">{{$categoria->nombre}}</option>
@@ -55,4 +55,7 @@
 			</tr>
 		</table>
 	</form>
+	<script type="text/javascript">
+	$("#categoria").val(<?php echo(isset($producto)?$producto->id_categoria:0);?>);
+	</script>
 @stop

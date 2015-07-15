@@ -12,18 +12,16 @@
 }
 
 #sur{
-	background-color: #f0f0f0;
+	background-color: #D8DBDA;
 	padding: 1em;
 	width: 100%;
+	text-align: center;
+	margin-bottom:-15px;
 }
 
 #este, #oeste{
 	display: inline-block;
 	vertical-align: top;
-}
-
-#sur footer h4{
-	text-align: center;
 }
 
 #login{
@@ -48,7 +46,8 @@
 
 .imagen-carrusel{
 	width: 100%;
-	height: 788px !important;
+	height: 400px !important;
+	text-align: center !important;
 }
 
 .categorias{
@@ -57,7 +56,7 @@
 }
 
 .bloque{
-	text-align: center;
+	text-align: center!important;
 }
 
 .info_modal_producto{

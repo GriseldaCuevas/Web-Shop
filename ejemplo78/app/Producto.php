@@ -26,7 +26,7 @@ class Producto extends Model{
 
     public static function getProducto($id_producto){
     	return self::join('categorias', 'productos.id_categoria', '=', 'categorias.id')
-    		->select('productos.id', 'productos.nombre', 'productos.marca', 'productos.precio', 'productos.img', 'productos.cantidad', 'categorias.nombre as categoria')
+    		->select('productos.id', 'productos.nombre', 'productos.marca', 'productos.precio', 'productos.img', 'productos.cantidad', 'categorias.nombre as categoria', "productos.id_categoria")
     		->where('productos.id', '=', $id_producto)->where('productos.activo', '=', 1)->first();
     }
 
@@ -60,6 +60,7 @@ class Producto extends Model{
             $producto->img = 'sin_imagen.jpg';
 
         $producto->marca = $request->input('marca');
+        $producto->activo = 1;
         $producto->cantidad = $request->input('cantidad');
         $producto->save();
     }
@@ -67,6 +68,12 @@ class Producto extends Model{
     public static function eliminar($id_producto){
         $producto=self::find($id_producto);
         $producto->activo=0;
+        $producto->save();
+    }
+
+    public static function decrementar($id_producto){
+        $producto = self::find($id_producto);
+        $producto->cantidad -= 1;
         $producto->save();
     }
 }

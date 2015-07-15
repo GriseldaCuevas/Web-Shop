@@ -8,26 +8,33 @@
 			    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
 			    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
 			    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+			    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
 			  </ol>
 
 			  <!-- Wrapper for slides -->
 			  <div class="carousel-inner" role="listbox">
 			    <div class="item active">
-			      <img class="imagen-carrusel" src="http://localhost:8000/img/carrusel/play_station4.jpg" alt="Increible play 4">
+			      <img class="imagen-carrusel" src="http://localhost:8000/img/carrusel/1.jpg" alt="Pantallas">
 			      <div class="carousel-caption">
-			        Increible play 4
+			        Pantallas
 			      </div>
 			    </div>
 			    <div class="item">
-			      <img class="imagen-carrusel" src="http://localhost:8000/img/carrusel/xbox_one.jpg" alt="un xbox one">
+			      <img class="imagen-carrusel" src="http://localhost:8000/img/carrusel/2.jpg" alt="un xbox one">
 			      <div class="carousel-caption">
-			        un xbox one"
+			        Home Theater
 			      </div>
 			    </div>
 			    <div class="item">
-			      <img class="imagen-carrusel" src="http://localhost:8000/img/carrusel/wiiu.jpg" alt="pgsafdwfasdf">
+			      <img class="imagen-carrusel" src="http://localhost:8000/img/carrusel/3.jpg" alt="Laptops">
 			      <div class="carousel-caption">
-			        pgsafdwfasdf
+			        videojuegos
+			      </div>
+			    </div>
+			    <div class="item">
+			      <img class="imagen-carrusel" src="http://localhost:8000/img/carrusel/4.jpg" alt="pgsafdwfasdf">
+			      <div class="carousel-caption">
+			        Laptops
 			      </div>
 			    </div>
 			  </div>
@@ -42,5 +49,5 @@
 			  </a>
 			</div>
 		</div>
-	</section>
+	</div>
 @stop

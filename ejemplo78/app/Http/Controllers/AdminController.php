@@ -16,8 +16,8 @@ class AdminController extends Controller{
     }
 
     public function login(Request $request){
-        $usuario = $request->input('usuario');
-        $pass = sha1($request->input('pass'));
+        $usuario = str_replace("\"","",str_replace("'","",$request->input('usuario')));
+        $pass = sha1(str_replace("\"","",str_replace("'","",$request->input('pass'))));
         $admin = Admin::login($usuario, $pass);
 
         if(count($admin) != 0){

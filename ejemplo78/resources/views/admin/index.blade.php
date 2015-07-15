@@ -4,6 +4,8 @@
 	<head>
 		<meta charset="utf-8"/>
 		<title>Administracion - Webshop</title>
+		<script type="text/javascript" src="http://localhost:8000/js/jquery-2.1.4.min.js"></script>
+
 		<link rel="stylesheet" type="text/css" href="http://localhost:8000/bootstrap/css/bootstrap.min.css"/>
 		<link rel="stylesheet" type="text/css" href="http://localhost:8000/css/admin.css"/>
 	</head>
@@ -29,8 +31,7 @@
 				<h4>WebShop&copy;</h4>
 			</footer>
 		</section>
-		<script type="text/javascript" src="http://localhost:8000/js/jquery-2.1.4.min.js"></script>
-		<script type="text/javascript" src="http://localhost:8000/bootstrap/js/bootstrap.min.js"></script>
+				<script type="text/javascript" src="http://localhost:8000/bootstrap/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="http://localhost:8000/js/admin.js"></script>
 	</body>
 </html>
