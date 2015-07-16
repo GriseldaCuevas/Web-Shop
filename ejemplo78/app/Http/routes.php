@@ -72,3 +72,4 @@ Route::get('/admin/categorias/editar/{id_categoria}', 'CategoriaController@edita
 Route::post('/admin/categorias/editar', 'CategoriaController@guardar');
 Route::get('/admin/categorias/agregar', 'CategoriaController@agregar');
 Route::post('/admin/categorias/registrar', 'CategoriaController@guardar');
+Route::post('/admin/categorias/eliminar', 'CategoriaController@eliminar');

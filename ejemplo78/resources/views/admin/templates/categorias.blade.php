@@ -14,6 +14,9 @@
 				<td>{{$categoria->nombre}}</td>
 				<td>
 					<a href="/admin/categorias/editar/{{$categoria->id}}">Editar</a>
+					<span>&nbsp;|&nbsp;</span>
+					<input type="hidden" id="token_delete" name="_token" value="{{ csrf_token() }}">
+					<a href="#" onclick="eliminarCategoria({{$categoria->id}});">Eliminar</a>
 				</td>
 			</tr>
 		@endforeach
