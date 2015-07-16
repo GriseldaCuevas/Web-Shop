@@ -1,0 +1,190 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 20/10/2014, 12:39:13 PM
+    Author     : wiliamszuniga
+*/
+
+#financialservices .nav{
+ margin-bottom: 0;
+ padding-left: 0;
+ list-style: none;
+}
+#financialservices .nav > li {
+ position: relative;
+ display: block;
+ padding:0px;
+ margin:0px;
+ font-style: normal !important;
+}
+#financialservices .nav > li > a {
+ position: relative;
+ display: block;
+ padding: 10px 15px;
+}
+#financialservices .nav > li > a:hover,
+#financialservices .nav > li > a:focus {
+ text-decoration: none;
+ background-color: #eeeeee;
+}
+#financialservices .nav > li.disabled > a {
+ color: #777777;
+}
+#financialservices .nav > li.disabled > a:hover,
+#financialservices .nav > li.disabled > a:focus {
+ color: #777777;
+ text-decoration: none;
+ background-color: transparent;
+ cursor: not-allowed;
+}
+#financialservices .nav .open > a,
+#financialservices .nav .open > a:hover,
+#financialservices .nav .open > a:focus {
+ background-color: #eeeeee;
+ border-color: #428bca;
+}
+#financialservices .nav .nav-divider {
+ height: 1px;
+ margin: 9px 0;
+ overflow: hidden;
+ background-color: #e5e5e5;
+}
+#financialservices .nav > li > a > img {
+ max-width: none;
+}
+#financialservices .nav-tabs {
+ border-bottom: 1px solid #dddddd;
+}
+#financialservices .nav-tabs > li {
+ float: left;
+ margin-bottom: -1px;
+}
+#financialservices .nav-tabs > li > a {
+ line-height: 1.42857143;
+ border: 1px solid transparent;
+ border-radius: 4px 4px 0 0;
+ color:#b1b1b1;
+}
+#financialservices .nav-tabs > li > a:hover {
+ border-color: #eeeeee #eeeeee #dddddd;
+}
+#financialservices .nav-tabs > li.active > a,
+#financialservices .nav-tabs > li.active > a:hover,
+#financialservices .nav-tabs > li.active > a:focus {
+ color: #555555;
+ background-color: #ffffff;
+ border: 1px solid #dddddd;
+ border-bottom-color: transparent;
+ cursor: default;
+}
+#financialservices .nav-tabs.nav-justified {
+ width: 100%;
+ border-bottom: 0;
+}
+#financialservices .nav-tabs.nav-justified > li {
+ float: none;
+}
+#financialservices .nav-tabs.nav-justified > li > a {
+ text-align: center;
+ margin-bottom: 5px;
+}
+#financialservices .nav-tabs.nav-justified > .dropdown .dropdown-menu {
+ top: auto;
+ left: auto;
+}
+@media (min-width: 768px) {
+ #financialservices .nav-tabs.nav-justified > li {
+   display: table-cell;
+   width: 1%;
+ }
+ #financialservices .nav-tabs.nav-justified > li > a {
+   margin-bottom: 0;
+ }
+}
+#financialservices .nav-tabs.nav-justified > li > a {
+ margin-right: 0;
+ border-radius: 4px;
+}
+#financialservices .nav-tabs.nav-justified > .active > a,
+#financialservices .nav-tabs.nav-justified > .active > a:hover,
+#financialservices .nav-tabs.nav-justified > .active > a:focus {
+ border: 1px solid #dddddd;
+}
+@media (min-width: 768px) {
+ #financialservices .nav-tabs.nav-justified > li > a {
+   border-bottom: 1px solid #dddddd;
+   border-radius: 4px 4px 0 0;
+ }
+ #financialservices .nav-tabs.nav-justified > .active > a,
+ #financialservices .nav-tabs.nav-justified > .active > a:hover,
+ #financialservices .nav-tabs.nav-justified > .active > a:focus {
+   border-bottom-color: #ffffff;
+ }
+}
+#financialservices .tab-content > .tab-pane {
+ display: none;
+}
+#financialservices .tab-content > .active {
+ display: block;
+}
+#financialservices .nav-tabs .dropdown-menu {
+ margin-top: -1px;
+ border-top-right-radius: 0;
+ border-top-left-radius: 0;
+}
+#financialservices .clearfix:before,
+#financialservices .clearfix:after,
+#financialservices .nav:before,
+#financialservices .nav:after {
+ content: " ";
+ display: table;
+}
+#financialservices .clearfix:after,
+#financialservices .nav:after {
+ clear: both;
+}
+#financialservices .center-block {
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+}
+table{
+    background-color:#FFFFFF;
+}
+
+/*Bloque Buen fin:::::::::::::::::::::::*/
+ul.responsiveimg {
+      list-style:none;
+      position:relative;
+      float:left;
+      width:100%;
+      height:100%;
+      margin:45px 0 0;
+}
+ul.responsiveimg li {
+      width: 10%;
+      float:left;
+  }
+ul.responsiveimg li img {
+      display: block;
+      height: auto;
+      width: 100%;
+  }
+ul.responsiveimg li img:hover {
+    opacity:0.7;
+  }
+@media only screen and (max-width: 700px) {
+ul.responsiveimg li {
+      width: 20%;
+      float:left;
+  }
+}
+/*END Bloque Buen fin::::::::::::::::::::::::::*/
+
+
+.cmshover:hover {
+    opacity:0.7
+}

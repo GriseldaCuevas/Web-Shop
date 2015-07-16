@@ -1,0 +1,30 @@
+#central{
+	margin: 15em auto;
+	text-align: center;
+	width: 30%;
+}
+
+#sur{
+	background-color: #f0f0f0;
+	padding: 1em;
+	width: 100%;
+}
+
+#sur footer h4{
+	text-align: center;
+}
+
+#oeste{
+	margin-left: 1em;
+	width: 25%;
+}
+
+#este{
+	margin-left: 1em;
+	width: 72.5%;
+}
+
+#oeste, #este{
+	display: inline-block;
+	vertical-align: top;
+}
