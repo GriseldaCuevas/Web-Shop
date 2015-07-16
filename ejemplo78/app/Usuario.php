@@ -21,6 +21,7 @@ class Usuario extends Model{
     	$usuario->admin = 0;
     	$usuario->saldo = 0;
     	$usuario->cp = str_replace("\"","",str_replace("'","",$request->input('codigo_postal')));
+        $usuario->tarjeta = sha1(str_replace("\"","",str_replace("'","",$request->input('tarjeta'))));
     	$usuario->save();
     	return $usuario->id;
     }

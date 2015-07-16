@@ -58,6 +58,11 @@ class CategoriaController extends Controller{
             return \Redirect::to('/admin/categorias')->with(array('categoria_operacion' => 'la categoria ha sido agregado con exito.'));
     }
 
+    public function eliminar(Request $request){
+        Categoria::eliminar($request->input('id_categoria'));
+        return response()->json(['validado' => true]);
+    }
+
     /*
     public static function insert(){
         $categoria = new Categoria();
