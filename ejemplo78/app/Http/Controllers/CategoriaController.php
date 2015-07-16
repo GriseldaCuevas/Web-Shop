@@ -52,7 +52,10 @@ class CategoriaController extends Controller{
             $file->move(public_path() . '/img/categorias/', $nombre);
         }
 
-        return \Redirect::to('/admin/categorias');
+        if($request->input('operacion')==1)
+            return \Redirect::to('/admin/categorias')->with(array('categoria_operacion' => 'la categoria ha sido editado con exito.'));
+        else
+            return \Redirect::to('/admin/categorias')->with(array('categoria_operacion' => 'la categoria ha sido agregado con exito.'));
     }
 
     /*

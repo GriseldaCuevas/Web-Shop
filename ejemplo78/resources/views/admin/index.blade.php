@@ -31,7 +31,9 @@
 				<h4>WebShop&copy;</h4>
 			</footer>
 		</section>
+		@include('admin.templates.mensajes_admin')
 				<script type="text/javascript" src="http://localhost:8000/bootstrap/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="http://localhost:8000/js/admin.js"></script>
+
 	</body>
 </html>

@@ -80,9 +80,13 @@ class ProductoController extends Controller{
             $file = $request->file('img');
             $nombre = $file->getClientOriginalName();
             $file->move(public_path() . '/img/productos/', $nombre);
+
         }
 
-        return \Redirect::to('/admin/productos');
+        if($request->input('operacion')==1)
+            return \Redirect::to('/admin/productos')->with(array('producto_operacion' => 'El producto ha sido editado con exito.'));
+        else
+            return \Redirect::to('/admin/productos')->with(array('producto_operacion' => 'El producto ha sido agregado con exito.'));
     }
 
     public function buscarProducto(Request $request){

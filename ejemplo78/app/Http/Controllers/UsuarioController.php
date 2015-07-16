@@ -43,7 +43,7 @@ class UsuarioController extends Controller{
                     \Session::put('id_usuario', $id_usuario);
                     \Session::put('carrito', array());
                     \Session::put('total_compra', 0);
-                    return \Redirect::to('/');
+                    return \Redirect::to('/')->with(array('registro_exitoso' => true, 'mensaje' => 'Felicidades, su cuenta ha sido creada'));;
                 }else{
                     $error_registro = true;
                     return \Redirect::back()->with(array('error_registro' => $error_registro, 'mensaje' => 'Las contraseñas no coinciden.'));

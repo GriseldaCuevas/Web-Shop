@@ -33,6 +33,7 @@ class CarritoController extends Controller{
             $total += $producto->precio;
             \Session::put('total_compra', $total);
             \Session::push('carrito', $producto);
+            \Session::flash('poner_carrito', true);
         }
 
         return response()->json(['validado' => true]);
@@ -69,6 +70,6 @@ class CarritoController extends Controller{
         ProductosVenta::agregarProductoAVenta(\Session::get('carrito'), $id_venta);
         \Session::put('carrito', array());
         \Session::put('total_compra', 0);
-        return \Redirect::to('/');
+        return \Redirect::to('/')->with(['compra_realizada' => true]);;
     }
 }

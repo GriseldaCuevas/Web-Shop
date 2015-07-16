@@ -15,6 +15,10 @@ function jquery(){
 
 	if(muestra_lista)
 		$('#lista_productos_venta').modal('show');
+	if(registro_exitoso)
+		$('#registro_validado').modal('show');
+	if(compra_realizada)
+		$('#compra_realizada').modal('show');
 }
 
 function getProducto(id_producto){
@@ -54,10 +58,14 @@ function agregarACarrito(){
 			_token: $('#_token').val()
 		},
 		function(json){
-			if(json)
+			if(json){
 				$('#producto_dialogo').modal('hide');
+				$('#poner_carrito').modal('show');
+			}	
 		},
 		'json'
+		
+
 	);
 }
 
@@ -70,8 +78,10 @@ function quitarProductoDeCarrito(id_producto){
 		},
 		function(json){
 			if(json.validado){
+				$('#quitar_carrito').modal('show');
 				$('#total_compra').text(json.total);
 				$('.carrito' + id_producto).fadeOut();
+
 			}
 		},
 		'json'
