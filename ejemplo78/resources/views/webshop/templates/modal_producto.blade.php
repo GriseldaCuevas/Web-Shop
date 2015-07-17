@@ -14,7 +14,7 @@
 						@if(Session::has('logeado'))
 			        		<input type="hidden" id="_token" name="_token" value="{{ csrf_token() }}">
 			        		<input type="hidden" id="id_producto_modal" name="id" value="">
-			        		<button type="submit" class="btn btn-primary" onclick="agregarACarrito();">Comprar</button>
+			        		<button type="submit" class="btn btn-primary" onclick="agregarACarrito();">Añadir al carrito</button>
 				        @else
 				        	Solo usuarios registrados pueden comprar.
 				        @endif

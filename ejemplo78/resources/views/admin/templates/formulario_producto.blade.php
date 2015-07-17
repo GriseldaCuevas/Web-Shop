@@ -48,7 +48,7 @@
 				<td></td>
 				<td></td>
 				<td align="right">
-					<button type="reset" class="btn btn-default">Borrar</button>
+					<button type="reset" class="btn btn-default">Cancelar</button>
 					<span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
 					<button type="submit" class="btn btn-primary">Guardar</button>
 				</td>
